@@ -1,4 +1,5 @@
 class DestinationsController < ApplicationController
+  before_action :admin_only, only: [:new, :edit, :update, :create, :destroy]
 
   def index
     if params[:name]
@@ -40,6 +41,6 @@ class DestinationsController < ApplicationController
   end
 
   def destination_params
-    params.permit(:name, :city, :country)
+    params.require(:destination).permit(:name, :city, :country)
   end
 end

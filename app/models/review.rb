@@ -1,5 +1,6 @@
 class Review < ApplicationRecord
   belongs_to :destination
+  
   validates :author, presence: true
   validates :content_body, presence: true
   validates :rating, presence: true

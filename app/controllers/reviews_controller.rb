@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :admin_only, only: [:edit, :update, :destroy]
 
   def index
     @destination = Destination.find(params[:destination_id])
@@ -48,6 +49,6 @@ class ReviewsController < ApplicationController
   end
 
   def review_params
-    params.permit(:author, :content_body, :rating)
+    params.require(:review).permit(:author, :content_body, :rating)
   end
 end
