@@ -32,9 +32,7 @@ gem 'rack-cors'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'rspec-rails'
-  # ~NH~ ADDED FOLLOWING GEM AFTER NEW.
   gem 'launchy'
-  # ~NH~ ADDED FOLLOWING GEM AFTER NEW.
   gem 'pry'
   gem 'capybara'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -48,7 +46,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# ~NH~ ADDED FOLLOWING TEST GEMS AFTER NEW.
 group :test do
   gem 'shoulda-matchers'
   gem 'simplecov', require: false
